@@ -1,0 +1,965 @@
+/* CSS crunched with Crunch - http://crunchapp.net/ */
+@charset "utf-8";
+/**
+ * File: styles.css
+ * Description : Contains all necessary styling for the BWL Minimal Pricing Table
+ * Author: xenioushk
+ * Credits: http://www.bluewindlab.net
+ * Project: Minimal Power Pricing Table ( Bootstrap Version) 
+ **/
+/*========================================================================*/
+/*   TABLE OF CONTENT
+/*========================================================================*/
+/*
+/*     01. PRICING TABLE STYLES
+/*     02. RED THEME
+/*     03. BLUE THEME
+/*     04. GREEN THEME
+/*     05. ORANGE THEME
+/*     06. YELLOW THEME
+/*     07. PRICING TABLE HELPERS
+/*     08. PRICING TABLE COLUMNS
+/*     09. RESPONSIVE STYLING
+/*
+/*========================================================================*/
+.clear {
+  clear: both;
+}
+/***********************************************************************************************/
+/*  01. PRICING TABLE STYLES */
+/***********************************************************************************************/
+.minimal-pricing-table {
+  clear: both;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-smooth: always;
+  font-family: 'Open Sans', sans-serif;
+}
+.minimal-pricing-table .planbg {
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  float: left;
+  margin-top: 25px;
+  margin-bottom: 24px;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;
+  top: 0px;
+  -webkit-transition: 0.6s 0.2s ease-out;
+  -moz-transition: 0.6s 0.2s ease-out;
+  -o-transition: 0.6s 0.2s ease-out;
+  transition: 0.6s 0.2s ease-out;
+}
+.minimal-pricing-table .planbg .plan_price_title {
+  height: 32px;
+  line-height: 32px;
+  padding: 12px 0;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  color: #5d5d5d;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  -webkit-transition: 0.5s 0.2s ease-out;
+  -moz-transition: 0.5s 0.2s ease-out;
+  -o-transition: 0.5s 0.2s ease-out;
+  transition: 0.5s 0.2s ease-out;
+}
+.minimal-pricing-table .planbg .plan_price_title:after {
+  -webkit-transition: 0.3s 0.2s ease-out;
+  -moz-transition: 0.3s 0.2s ease-out;
+  -o-transition: 0.3s 0.2s ease-out;
+  transition: 0.3s 0.2s ease-out;
+  position: absolute;
+  content: '';
+  width: 24px;
+  height: 2px;
+  background: #ffffff;
+  left: 50%;
+  top: 0;
+  margin-left: -12px;
+  display: inline-block;
+}
+.minimal-pricing-table .planbg .planholder {
+  width: 100%;
+  background: transparent;
+  border-top: 0px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  position: relative;
+  padding: 0px;
+}
+.minimal-pricing-table .planbg .iconbg {
+  width: 100%;
+  font-size: 54px;
+  color: #fff;
+  text-align: center;
+  padding: 54px 0;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  z-index: 3;
+}
+.minimal-pricing-table .planbg .iconbg i {
+  color: #ffffff;
+  display: inline-block;
+  -webkit-transform: rotateY(0deg);
+  -moz-transform: rotateY(0deg);
+  -ms-transform: rotateY(0deg);
+  -o-transform: rotateY(0deg);
+  transform: rotateY(0deg);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  z-index: 10;
+  -webkit-transition: all 1s ease-out;
+  -moz-transition: all 1s ease-out;
+  -o-transition: all 1s ease-out;
+  transition: all 1s ease-out;
+}
+.minimal-pricing-table .planbg .iconbg:hover i {
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  color: #333333;
+}
+.minimal-pricing-table .planbg .packagetypebg {
+  width: 100%;
+  background: transparent;
+  color: #5d5d5d;
+  position: relative;
+  padding: 48px 0 24px 0;
+  -webkit-transition: 0.8s 0.2s ease-out;
+  -moz-transition: 0.8s 0.2s ease-out;
+  -o-transition: 0.8s 0.2s ease-out;
+  transition: 0.8s 0.2s ease-out;
+}
+.minimal-pricing-table .planbg .packagetypebg .ribbon-badge {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 6px;
+  background: #ffffff;
+  z-index: 2;
+  overflow: hidden;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding;
+  background-clip: padding-box;
+  -webkit-box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  -webkit-transition: 0.8s 0.2s ease-out;
+  -moz-transition: 0.8s 0.2s ease-out;
+  -o-transition: 0.8s 0.2s ease-out;
+  transition: 0.8s 0.2s ease-out;
+  min-width: 42px;
+  font-size: 10px;
+  font-weight: normal;
+}
+.minimal-pricing-table .planbg .packagetypebg .ribbon-badge span {
+  display: block;
+  text-align: center;
+  line-height: 15px;
+  z-index: 2;
+}
+.minimal-pricing-table .planbg .packagetypebg .ribbon-badge .amount {
+  font-weight: bold;
+  display: block;
+  color: #5d5d5d;
+}
+.minimal-pricing-table .planbg .packagetypebg .ribbon-badge .badge-text {
+  font-size: 10px;
+  display: block;
+}
+.minimal-pricing-table .planbg .packagetypebg div.ribbon-red-theme:after {
+  background: rgba(208, 21, 28, 0.1);
+}
+.minimal-pricing-table .planbg .packagetypebg div.ribbon-blue-theme:after {
+  background: rgba(15, 100, 186, 0.1);
+}
+.minimal-pricing-table .planbg .packagetypebg div.ribbon-green-theme:after {
+  background: rgba(76, 184, 73, 0.1);
+}
+.minimal-pricing-table .planbg .packagetypebg div.ribbon-orange-theme:after {
+  background: rgba(255, 104, 21, 0.2);
+}
+.minimal-pricing-table .planbg .packagetypebg div.ribbon-yellow-theme:after {
+  background: rgba(252, 209, 2, 0.2);
+}
+.minimal-pricing-table .planbg .package_amount_duration {
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  line-height: 24px;
+  display: block;
+  padding: 24px 0 0 0;
+  font-weight: 400;
+  color: #5d5d5d;
+  text-transform: uppercase;
+  z-index: 10;
+}
+.minimal-pricing-table .planbg .package_amount_duration span.amount {
+  font-family: 'Oswald', sans-serif;
+  font-size: 32px;
+  font-weight: 300;
+  display: block;
+  margin-bottom: 12px;
+  letter-spacing: 1px;
+  text-indent: 22px;
+  -webkit-transition: 0.5s 0.2s ease-out;
+  -moz-transition: 0.5s 0.2s ease-out;
+  -o-transition: 0.5s 0.2s ease-out;
+  transition: 0.5s 0.2s ease-out;
+}
+.minimal-pricing-table .planbg .package_amount_duration span.amount i {
+  -webkit-transition: 0.5s 0.2s ease-out;
+  -moz-transition: 0.5s 0.2s ease-out;
+  -o-transition: 0.5s 0.2s ease-out;
+  transition: 0.5s 0.2s ease-out;
+  font-style: normal;
+  font-size: 18px;
+  color: #808080;
+  position: relative;
+  top: -16px;
+  left: 5px;
+}
+.minimal-pricing-table .planbg .package_amount_duration span.duration {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  display: block;
+  position: relative;
+  -webkit-transition: 0.5s 0.2s ease-out;
+  -moz-transition: 0.5s 0.2s ease-out;
+  -o-transition: 0.5s 0.2s ease-out;
+  transition: 0.5s 0.2s ease-out;
+}
+.minimal-pricing-table .planbg .package_amount_duration span.package_icon {
+  font-size: 38px;
+  font-weight: bold;
+  display: block;
+  position: relative;
+  margin: 12px 0;
+}
+.minimal-pricing-table .planbg .package_amount_duration span.package_icon i {
+  color: #e6e6e6;
+  -webkit-transition: 0.5s 0.2s ease-out;
+  -moz-transition: 0.5s 0.2s ease-out;
+  -o-transition: 0.5s 0.2s ease-out;
+  transition: 0.5s 0.2s ease-out;
+}
+.minimal-pricing-table .planbg .features {
+  list-style-type: none;
+  margin: 0px 3px;
+  padding: 0px;
+  border-left: 0px solid #e5e5e5;
+  border-right: 0px solid #e5e5e5;
+}
+.minimal-pricing-table .planbg .features li {
+  font-family: 'Open Sans', sans-serif;
+  list-style: none;
+  text-align: left;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-left: 0px;
+  border-right: 0px;
+  border-top: 0px;
+  width: 100%;
+  margin: 0;
+  padding: 12px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 11px;
+  font-weight: normal;
+  color: #373737;
+  -webkit-transition: 0.4s 0.2s ease-out;
+  -moz-transition: 0.4s 0.2s ease-out;
+  -o-transition: 0.4s 0.2s ease-out;
+  transition: 0.4s 0.2s ease-out;
+}
+.minimal-pricing-table .planbg .features li i {
+  font-size: 13px;
+  font-weight: normal;
+  margin-right: 3px;
+  color: #5d5d5d;
+}
+.minimal-pricing-table .planbg .features li:hover {
+  background: rgba(195, 195, 195, 0.1);
+}
+.minimal-pricing-table .planbg .selectpackage {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 12px;
+  width: 100%;
+  list-style: none;
+  padding: 12px 0 20px 0;
+  border: 0;
+  margin-top: 0px;
+}
+.minimal-pricing-table .planbg .selectpackage a {
+  text-decoration: none;
+  color: #ffffff;
+  background: #f7423c;
+  width: 130px;
+  height: 42px;
+  line-height: 42px;
+  text-transform: Uppercase;
+  font-weight: bold;
+  display: block;
+  text-align: center;
+  margin: 0 auto;
+  position: relative;
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  overflow: hidden;
+  padding: 0px;
+  -webkit-box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+.minimal-pricing-table .planbg .selectpackage a:hover,
+.minimal-pricing-table .planbg .selectpackage a:focus {
+  background: #c50e08;
+}
+.minimal-pricing-table .planbg .selectpackage a i {
+  font-size: 16px;
+}
+.minimal-pricing-table .planbg:hover {
+  top: -5px;
+}
+.minimal-pricing-table .planbg:hover .plan_price_title:after {
+  position: absolute;
+  content: '';
+  width: 48px;
+  background: #bfbfbf;
+  left: 50%;
+  height: 2px;
+  bottom: 0px;
+  margin-left: -24px;
+  display: inline-block;
+}
+.minimal-pricing-table .planbg:hover span.amount {
+  color: #ffffff;
+}
+.minimal-pricing-table .planbg:hover span.amount i {
+  color: #ffffff;
+}
+.minimal-pricing-table .planbg:hover span.duration {
+  color: #ffffff;
+}
+.minimal-pricing-table .planbg:hover .ribbon-badge {
+  -webkit-transform: rotateX(360deg);
+  -moz-transform: rotateX(360deg);
+  -ms-transform: rotateX(360deg);
+  -o-transform: rotateX(360deg);
+  transform: rotateX(360deg);
+}
+.minimal-pricing-table .planbg:hover .package_amount_duration span.package_icon i {
+  color: #cccccc;
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+}
+.minimal-pricing-table {
+  /***********************************************************************************************/
+  /* 02. RED THEME */
+  /***********************************************************************************************/
+  /***********************************************************************************************/
+  /* 03. BLUE THEME */
+  /***********************************************************************************************/
+  /***********************************************************************************************/
+  /* 04. GREEN THEME */
+  /***********************************************************************************************/
+  /***********************************************************************************************/
+  /* 05. ORANGE THEME */
+  /***********************************************************************************************/
+  /***********************************************************************************************/
+  /* 06. YELLOW THEME */
+  /***********************************************************************************************/
+}
+.minimal-pricing-table .red_theme {
+  -webkit-box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.2);
+}
+.minimal-pricing-table .red_theme .plan_price_title:after {
+  background: #f7423c;
+}
+.minimal-pricing-table .red_theme .packagetypebg {
+  border-bottom: 3px solid #f7423c;
+  position: relative;
+  color: #353740;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.minimal-pricing-table .red_theme .packagetypebg:after {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  margin-left: -26px;
+  width: 0;
+  border-bottom: 15px solid #f7423c;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
+}
+.minimal-pricing-table .red_theme .package_amount_duration span.package_icon i {
+  color: #f7423c;
+}
+.minimal-pricing-table .red_theme .features li {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.minimal-pricing-table .red_theme .features li:hover {
+  color: #f7423c;
+  border-color: #cccccc;
+}
+.minimal-pricing-table .red_theme .iconbg {
+  background: #f7423c;
+  color: #ffffff;
+}
+.minimal-pricing-table .red_theme .selectpackage a {
+  color: #f7423c;
+  background: transparent;
+  border: 1px solid #f7423c;
+}
+.minimal-pricing-table .red_theme .selectpackage a:hover,
+.minimal-pricing-table .red_theme .selectpackage a:focus {
+  background: transparent;
+  border: 1px solid #f9716d;
+  color: #940b06;
+}
+.minimal-pricing-table .red_theme .ribbon .ribbon-container {
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+.minimal-pricing-table .red_theme .ribbon .ribbon-base {
+  background: #f5130b;
+}
+.minimal-pricing-table .red_theme .ribbon .ribbon-base:before {
+  border-left: 1px dashed #f7423c;
+  border-right: 1px dashed #f7423c;
+  border-bottom: 1px dashed #f7423c;
+}
+.minimal-pricing-table .red_theme .ribbon .ribbon-text {
+  color: #ffffff;
+}
+.minimal-pricing-table .red_theme:hover .plan_price_title {
+  color: #f2f2f2;
+}
+.minimal-pricing-table .red_theme:hover .packagetypebg {
+  border-bottom: 3px solid #353740;
+  position: relative;
+  background: #f7423c;
+}
+.minimal-pricing-table .red_theme:hover .packagetypebg:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  margin-left: -26px;
+  width: 0;
+  border-bottom: 15px solid #353740;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
+}
+.minimal-pricing-table .blue_theme {
+  -webkit-box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.2);
+}
+.minimal-pricing-table .blue_theme .plan_price_title:after {
+  background: #4285f4;
+}
+.minimal-pricing-table .blue_theme .packagetypebg {
+  border-bottom: 3px solid #4285f4;
+  position: relative;
+  color: #353740;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.minimal-pricing-table .blue_theme .packagetypebg:after {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  margin-left: -26px;
+  width: 0;
+  border-bottom: 15px solid #4285f4;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
+}
+.minimal-pricing-table .blue_theme .package_amount_duration span.package_icon i {
+  color: #4285f4;
+}
+.minimal-pricing-table .blue_theme .features li {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.minimal-pricing-table .blue_theme .features li:hover {
+  color: #4285f4;
+  border-color: #cccccc;
+}
+.minimal-pricing-table .blue_theme .iconbg {
+  background: #4285f4;
+  color: #ffffff;
+}
+.minimal-pricing-table .blue_theme .selectpackage a {
+  color: #4285f4;
+  background: transparent;
+  border: 1px solid #4285f4;
+}
+.minimal-pricing-table .blue_theme .selectpackage a:hover,
+.minimal-pricing-table .blue_theme .selectpackage a:focus {
+  background: transparent;
+  border: 1px solid #72a4f7;
+  color: #093d94;
+}
+.minimal-pricing-table .blue_theme .ribbon .ribbon-container {
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+.minimal-pricing-table .blue_theme .ribbon .ribbon-base {
+  background: #1266f1;
+}
+.minimal-pricing-table .blue_theme .ribbon .ribbon-base:before {
+  border-left: 1px dashed #4285f4;
+  border-right: 1px dashed #4285f4;
+  border-bottom: 1px dashed #4285f4;
+}
+.minimal-pricing-table .blue_theme .ribbon .ribbon-text {
+  color: #ffffff;
+}
+.minimal-pricing-table .blue_theme:hover .plan_price_title {
+  color: #f2f2f2;
+}
+.minimal-pricing-table .blue_theme:hover .packagetypebg {
+  border-bottom: 3px solid #353740;
+  position: relative;
+  background: #4285f4;
+}
+.minimal-pricing-table .blue_theme:hover .packagetypebg:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  margin-left: -26px;
+  width: 0;
+  border-bottom: 15px solid #353740;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
+}
+.minimal-pricing-table .blue_theme:hover .packagetypebg:before {
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  opacity: 0.9;
+}
+.minimal-pricing-table .green_theme {
+  -webkit-box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.2);
+}
+.minimal-pricing-table .green_theme .plan_price_title:after {
+  background: #41a03f;
+}
+.minimal-pricing-table .green_theme .packagetypebg {
+  border-bottom: 3px solid #41a03f;
+  position: relative;
+  color: #353740;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.minimal-pricing-table .green_theme .packagetypebg:after {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  margin-left: -26px;
+  width: 0;
+  border-bottom: 15px solid #41a03f;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
+}
+.minimal-pricing-table .green_theme .package_amount_duration span.package_icon i {
+  color: #41a03f;
+}
+.minimal-pricing-table .green_theme .features li {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.minimal-pricing-table .green_theme .features li:hover {
+  color: #41a03f;
+  border-color: #cccccc;
+}
+.minimal-pricing-table .green_theme .iconbg {
+  background: #41a03f;
+  color: #ffffff;
+}
+.minimal-pricing-table .green_theme .selectpackage a {
+  color: #41a03f;
+  background: transparent;
+  border: 1px solid #41a03f;
+}
+.minimal-pricing-table .green_theme .selectpackage a:hover,
+.minimal-pricing-table .green_theme .selectpackage a:focus {
+  background: transparent;
+  border: 1px solid #58bc56;
+  color: #143214;
+}
+.minimal-pricing-table .green_theme .ribbon .ribbon-container {
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+.minimal-pricing-table .green_theme .ribbon .ribbon-base {
+  background: #327b31;
+}
+.minimal-pricing-table .green_theme .ribbon .ribbon-base:before {
+  border-left: 1px dashed #41a03f;
+  border-right: 1px dashed #41a03f;
+  border-bottom: 1px dashed #41a03f;
+}
+.minimal-pricing-table .green_theme .ribbon .ribbon-text {
+  color: #ffffff;
+}
+.minimal-pricing-table .green_theme:hover .plan_price_title {
+  color: #f2f2f2;
+}
+.minimal-pricing-table .green_theme:hover .packagetypebg {
+  border-bottom: 3px solid #353740;
+  position: relative;
+  background: #41a03f;
+}
+.minimal-pricing-table .green_theme:hover .packagetypebg:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  margin-left: -26px;
+  width: 0;
+  border-bottom: 15px solid #353740;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
+}
+.minimal-pricing-table .green_theme:hover .packagetypebg:before {
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  opacity: 0.9;
+}
+.minimal-pricing-table .orange_theme {
+  -webkit-box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.2);
+}
+.minimal-pricing-table .orange_theme .plan_price_title:after {
+  background: #e54b26;
+}
+.minimal-pricing-table .orange_theme .packagetypebg {
+  border-bottom: 3px solid #e54b26;
+  position: relative;
+  color: #353740;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.minimal-pricing-table .orange_theme .packagetypebg:after {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  margin-left: -26px;
+  width: 0;
+  border-bottom: 15px solid #e54b26;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
+}
+.minimal-pricing-table .orange_theme .package_amount_duration span.package_icon i {
+  color: #e54b26;
+}
+.minimal-pricing-table .orange_theme .features li {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.minimal-pricing-table .orange_theme .features li:hover {
+  color: #e54b26;
+  border-color: #cccccc;
+}
+.minimal-pricing-table .orange_theme .iconbg {
+  background: #e54b26;
+  color: #ffffff;
+}
+.minimal-pricing-table .orange_theme .selectpackage a {
+  color: #e54b26;
+  background: transparent;
+  border: 1px solid #e54b26;
+}
+.minimal-pricing-table .orange_theme .selectpackage a:hover,
+.minimal-pricing-table .orange_theme .selectpackage a:focus {
+  background: transparent;
+  border: 1px solid #ea7154;
+  color: #661e0c;
+}
+.minimal-pricing-table .orange_theme .ribbon .ribbon-container {
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+.minimal-pricing-table .orange_theme .ribbon .ribbon-base {
+  background: #327b31;
+}
+.minimal-pricing-table .orange_theme .ribbon .ribbon-base:before {
+  border-left: 1px dashed #e54b26;
+  border-right: 1px dashed #e54b26;
+  border-bottom: 1px dashed #e54b26;
+}
+.minimal-pricing-table .orange_theme .ribbon .ribbon-text {
+  color: #ffffff;
+}
+.minimal-pricing-table .orange_theme:hover .plan_price_title {
+  color: #f2f2f2;
+}
+.minimal-pricing-table .orange_theme:hover .packagetypebg {
+  border-bottom: 3px solid #353740;
+  position: relative;
+  background: #e54b26;
+}
+.minimal-pricing-table .orange_theme:hover .packagetypebg:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  margin-left: -26px;
+  width: 0;
+  border-bottom: 15px solid #353740;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
+}
+.minimal-pricing-table .orange_theme:hover .packagetypebg:before {
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  opacity: 0.9;
+}
+.minimal-pricing-table .yellow_theme {
+  -webkit-box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: inset 0 0 5px 0px rgba(0, 0, 0, 0.2);
+}
+.minimal-pricing-table .yellow_theme .plan_price_title:after {
+  background: #fcd102;
+}
+.minimal-pricing-table .yellow_theme .packagetypebg {
+  border-bottom: 3px solid #fcd102;
+  position: relative;
+  color: #353740;
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+.minimal-pricing-table .yellow_theme .packagetypebg:after {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  margin-left: -26px;
+  width: 0;
+  border-bottom: 15px solid #fcd102;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
+}
+.minimal-pricing-table .yellow_theme .package_amount_duration span.package_icon i {
+  color: #fcd102;
+}
+.minimal-pricing-table .yellow_theme .features li {
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+.minimal-pricing-table .yellow_theme .features li:hover {
+  color: #fcd102;
+  border-color: #cccccc;
+}
+.minimal-pricing-table .yellow_theme .iconbg {
+  background: #fcd102;
+  color: #ffffff;
+}
+.minimal-pricing-table .yellow_theme .selectpackage a {
+  color: #fcd102;
+  background: transparent;
+  border: 1px solid #fcd102;
+}
+.minimal-pricing-table .yellow_theme .selectpackage a:hover,
+.minimal-pricing-table .yellow_theme .selectpackage a:focus {
+  background: transparent;
+  border: 1px solid #fddb34;
+  color: #645301;
+}
+.minimal-pricing-table .yellow_theme .ribbon .ribbon-container {
+  border-left: 1px solid #cccccc;
+  border-right: 1px solid #cccccc;
+  border-bottom: 1px solid #cccccc;
+}
+.minimal-pricing-table .yellow_theme .ribbon .ribbon-base {
+  background: #327b31;
+}
+.minimal-pricing-table .yellow_theme .ribbon .ribbon-base:before {
+  border-left: 1px dashed #fcd102;
+  border-right: 1px dashed #fcd102;
+  border-bottom: 1px dashed #fcd102;
+}
+.minimal-pricing-table .yellow_theme .ribbon .ribbon-text {
+  color: #ffffff;
+}
+.minimal-pricing-table .yellow_theme:hover .plan_price_title {
+  color: #f2f2f2;
+}
+.minimal-pricing-table .yellow_theme:hover .packagetypebg {
+  border-bottom: 3px solid #353740;
+  position: relative;
+  background: #e3bc02;
+}
+.minimal-pricing-table .yellow_theme:hover .packagetypebg:after {
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 50%;
+  margin-left: -26px;
+  width: 0;
+  border-bottom: 15px solid #353740;
+  border-left: 26px solid transparent;
+  border-right: 26px solid transparent;
+}
+.minimal-pricing-table .yellow_theme:hover .packagetypebg:before {
+  -webkit-transform: rotateY(360deg);
+  -moz-transform: rotateY(360deg);
+  -ms-transform: rotateY(360deg);
+  -o-transform: rotateY(360deg);
+  transform: rotateY(360deg);
+  opacity: 0.9;
+}
+/***********************************************************************************************/
+/* 07. PRICING TABLE HELPERS */
+/***********************************************************************************************/
+.bpt-align-left {
+  text-align: left;
+}
+.bpt-align-center {
+  text-align: center;
+}
+.bpt-align-right {
+  text-align: right;
+}
+/***********************************************************************************************/
+/* 08. PRICING TABLE COLUMNS */
+/***********************************************************************************************/
+.plan-col-1 .planbg {
+  width: 98%;
+}
+.plan-col-2 .planbg {
+  width: 48%;
+}
+.plan-col-3 .planbg {
+  width: 31%;
+}
+.plan-col-4 .planbg {
+  width: 23%;
+}
+.plan-col-5 .planbg {
+  width: 18%;
+}
+/***********************************************************************************************/
+/* 09. RESPONSIVE STYLING */
+/***********************************************************************************************/
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .minimal-pricing-table .planbg {
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+  .plan-col-1 .planbg,
+  .plan-col-2 .planbg,
+  .plan-col-3 .planbg,
+  .plan-col-4 .planbg {
+    width: 98%;
+  }
+}
+@media only screen and (min-width: 480px) and (max-width: 1000px) {
+  .minimal-pricing-table .planbg {
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+  }
+}

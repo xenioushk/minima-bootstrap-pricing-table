@@ -1,0 +1,1332 @@
+/**
+ * File: styles.css
+ * Description : Contains all necessary styling for the BWL Minimal Pricing Table
+ * Author: xenioushk
+ * Credits: http://www.bluewindlab.net
+ * Project: Minimal Power Pricing Table ( Bootstrap Version) 
+ **/
+
+/*========================================================================*/
+/*   TABLE OF CONTENT
+/*========================================================================*/
+/*
+/*     01. PRICING TABLE STYLES
+/*     02. RED THEME
+/*     03. BLUE THEME
+/*     04. GREEN THEME
+/*     05. ORANGE THEME
+/*     06. YELLOW THEME
+/*     07. PRICING TABLE HELPERS
+/*     08. PRICING TABLE COLUMNS
+/*     09. RESPONSIVE STYLING
+/*
+/*========================================================================*/
+
+
+@charset "utf-8";
+.clear {
+  clear: both;
+}
+
+/***********************************************************************************************/
+/*  01. PRICING TABLE STYLES */
+/***********************************************************************************************/
+
+.minimal-pricing-table {
+  clear: both;
+  line-height: 24px;
+  -webkit-font-smoothing: antialiased;
+   -moz-osx-font-smoothing: grayscale;
+   font-smooth: always;
+   font-family: @body-font;
+   
+}
+
+.minimal-pricing-table .planbg {
+  width: 100%;
+  height: auto;
+  min-height: 500px;
+  float: left;
+  margin-top: 25px;
+  margin-bottom: 24px;
+  margin-left: 1%;
+  margin-right: 1%;
+  position: relative;  
+  top: 0px;
+ .transition(0.6s );
+
+    .plan_price_title {
+        height: 32px;
+        line-height: 32px;
+        padding: 12px 0;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        font-family: @heading-font;
+        font-size: 15px;
+        font-weight: 400;
+        color: @text-color;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        position: relative;
+        .transition( 0.5s);
+
+
+        &:after{
+
+            .transition(0.3s);
+            position: absolute;
+            content: '';
+            width: 24px;
+            height: 2px;
+            background: @light-bg;
+            left: 50%;
+            top: 0;
+            margin-left: -12px;
+            display: inline-block;
+
+        }
+
+    }
+
+    .planholder {
+      width: 100%;
+      background: transparent;
+      border-top: 0px;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      position: relative;
+      padding: 0px;
+    }
+
+      .iconbg {
+            width: 100%;
+            font-size: 54px;
+            color: #fff;
+            text-align: center;
+            padding: 54px 0;
+            display: block;
+            position: relative;
+            overflow: hidden;
+            z-index: 3;
+
+            &:after{
+                
+            }
+
+
+              i {
+                color: @light-text-color;
+                display: inline-block;
+                -webkit-transform: rotateY(0deg);
+                -moz-transform: rotateY(0deg);
+                -ms-transform: rotateY(0deg);
+                -o-transform: rotateY(0deg);
+                transform: rotateY(0deg);
+                box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+                z-index: 10;
+                .transition( all,  1s );
+              }
+
+              &:hover{
+
+                i{
+                    -webkit-transform: rotateY(360deg);
+                    -moz-transform: rotateY(360deg);
+                    -ms-transform: rotateY(360deg);
+                    -o-transform: rotateY(360deg);
+                    transform: rotateY(360deg);
+                    color: darken(@light-text-color, 80%);
+                }
+                
+                 &:after{
+            
+                    
+                }
+
+
+              }
+
+
+      }
+
+      
+    .packagetypebg {
+      width: 100%;
+      background: transparent;
+      color: @text-color;
+      position: relative;
+      padding: 48px 0 24px 0;
+      .transition(0.8s);
+
+      .ribbon-badge{
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            display: inline-block;
+            vertical-align: middle;
+            padding: 6px;
+            background: @light-bg;
+            z-index: 2;
+            overflow: hidden;
+            .round(2px);
+            .inner-shadow(0,0,1px,1px,0.1);
+            .transition(0.8s);
+            min-width: 42px;
+            font-size: 10px;
+            font-weight: normal;
+             
+            span{
+                display: block;
+                text-align: center;
+                line-height: 15px;
+                z-index: 2;
+            }
+            
+            .amount{
+                font-weight: bold;
+                display: block;
+                color: @text-color;
+            }
+
+            .badge-text{
+                font-size: 10px;
+                display: block;
+            }
+            
+       }
+
+       div.ribbon-red-theme{
+
+            &:after{
+                background: rgba(208,21,28,0.1);
+            }
+
+        }
+
+        div.ribbon-blue-theme{
+
+            &:after{
+                background: rgba(15,100,186,0.1);
+            }
+
+        }
+
+        div.ribbon-green-theme{
+
+            &:after{
+                background: rgba(76,184,73,0.1);
+            }
+
+        }
+
+        div.ribbon-orange-theme{
+
+            &:after{
+                background: rgba(255,104,21,0.2);
+            }
+
+        }
+
+        div.ribbon-yellow-theme{
+
+            &:after{
+                background: rgba(252,209,2,0.2);
+            }
+
+        }
+
+    }
+
+    .package_amount_duration {
+       
+      position: relative; 
+      overflow: hidden;
+      text-align: center;
+      line-height: 24px;
+      display: block;
+      padding: 24px 0 0 0;
+      font-weight: 400;
+      color: @text-color;
+      text-transform: uppercase;
+      z-index: 10;
+
+      span.amount{
+            font-family: @heading-font;
+            font-size: 32px;
+            font-weight: 300;
+            display: block;
+            margin-bottom: 12px;
+            letter-spacing: 1px;
+            text-indent: 22px;
+            .transition(0.5s);
+
+            i{
+                
+                .transition(0.5s);
+                font-style: normal;
+                font-size: 18px;
+                color: darken(@light-text-color, 50%);
+                position: relative;
+                top: -16px;
+                left: 5px;
+            }
+
+        }
+
+        span.duration{
+            font-family: @body-font;
+            font-size: 12px;
+            font-weight: bold;
+            display: block;
+            position: relative;
+            .transition(0.5s);
+
+        }
+
+        span.package_icon{
+            font-size: 38px;
+            font-weight: bold;
+            display: block;
+            position: relative;
+            margin: 12px 0;
+
+            i {
+                color: darken(@light-text-color, 10%);
+                .transition(0.5s);
+            }
+        }
+
+    }
+
+
+    .features {
+      list-style-type: none;
+      margin: 0px 3px;
+      padding: 0px;
+      border-left: 0px solid #e5e5e5;
+      border-right: 0px solid #e5e5e5;
+    }
+
+    .features li {
+      font-family: @body-font;
+      list-style: none;
+      text-align: left;
+      background: #fff;
+      border: 1px solid #e5e5e5;
+      border-left: 0px;
+      border-right: 0px;
+      border-top: 0px;
+      width: 100%;
+      margin: 0;
+      padding: 12px;
+      -moz-box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      font-size: 11px;
+      font-weight: normal;
+      color: darken(@text-color,15%);
+      .transition( 0.4s );
+
+      i{
+            font-size: 13px;
+            font-weight: normal;
+            margin-right: 3px;
+            color: @text-color;
+            
+      }
+      
+        &:hover{
+
+            background: rgba(195,195,195, 0.1);
+
+        }
+
+    }
+
+    .selectpackage {
+      font-family: @body-font;
+      font-size: 12px;
+      width: 100%;
+      list-style: none;
+      padding: 12px 0 20px 0;
+      border: 0;
+      margin-top: 0px;
+
+      a {
+        text-decoration: none;
+        color: @light-text-color;
+        background: @red-theme-bg;
+        width: 130px;
+        height: 42px;
+        line-height: 42px;
+        text-transform: Uppercase;
+        font-weight: bold;
+        display: block;
+        text-align: center;
+        margin:0 auto;
+        position: relative;
+        .transition( all,  0.3s );
+        overflow: hidden;
+        padding: 0px;
+        .inner-shadow(0,0,1px,1px, 0.1);
+        z-index: 1;
+
+
+            &:hover,
+            &:focus{
+
+                background: darken(@red-theme-bg,20%);
+
+                &:after{
+                     
+
+                   }
+            }
+
+            i{
+                font-size: 16px;
+            }
+
+        }
+
+    }
+
+
+    &:hover{
+
+        top: -5px;
+
+        .plan_price_title{
+
+            &:after{
+
+                 position: absolute;
+                 content: '';
+                 width: 48px;
+                  background: darken(@light-bg, 25%);
+                  left: 50%;
+                  height: 2px;
+                  bottom: 0px;
+                  margin-left: -24px;
+                  display: inline-block;
+
+            }
+
+        }
+
+        span.amount{
+            color: @light-text-color;
+
+            i{
+                color: @light-text-color;
+            }
+            
+        }
+
+        span.duration{
+             color: @light-text-color;
+        }
+          
+
+        .ribbon-badge{
+
+            -webkit-transform: rotateX(360deg);
+                -moz-transform: rotateX(360deg);
+                -ms-transform: rotateX(360deg);
+                -o-transform: rotateX(360deg);
+                transform: rotateX(360deg);
+
+       }
+
+         .package_amount_duration {
+       
+            span.package_icon{
+
+                i{
+                 color: darken(@light-text-color, 20%);
+                -webkit-transform: rotateY(360deg);
+                -moz-transform: rotateY(360deg);
+                -ms-transform: rotateY(360deg);
+                -o-transform: rotateY(360deg);
+                transform: rotateY(360deg);
+                }
+            }
+
+        }
+
+    }
+
+}
+
+
+
+.minimal-pricing-table{
+
+/***********************************************************************************************/
+/* 02. RED THEME */
+/***********************************************************************************************/
+    .red_theme{
+
+        .inner-shadow(0,0,5px,0px, 0.2);
+
+        .plan_price_title {
+
+            &:after{
+
+                background: @red-theme-bg;
+
+            }
+
+        }     
+
+        .packagetypebg {
+            border-bottom: 3px solid @red-theme-bg;
+            position: relative;
+            color: @dark-bg;
+             .transition( all,  0.5s );
+            &:after{
+                .transition( all,  0.5s );
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 50%;
+                margin-left: -26px;
+                width: 0;
+                border-bottom: 15px solid @red-theme-bg;
+                border-left: 26px solid transparent;
+                border-right: 26px solid transparent;
+            }
+            
+        }
+
+        .package_amount_duration {
+       
+            span.package_icon{
+
+                i {
+                    color: @red-theme-bg;
+                }
+            }
+
+        }
+
+        
+
+        .features li {
+            .transition( all,  0.3s );
+
+            &:hover {
+              color: @red-theme-bg;
+              border-color: @light-border-color;
+            }
+
+        }
+
+       .iconbg {
+            background: @red-theme-bg;
+            color: @light-text-color;
+
+
+        }
+
+        .selectpackage {
+
+           a {
+
+             color: @red-theme-bg;
+             background: transparent;
+             border: 1px solid @red-theme-bg;
+             
+                 &:hover,
+                 &:focus{
+                     background: transparent;
+                     border: 1px solid lighten(@red-theme-bg,10%);
+                     color: darken(@red-theme-bg,30%);
+                 }
+
+             }
+
+         }
+
+      .ribbon {
+
+
+            .ribbon-container {
+               
+                border-left: 1px solid @light-border-color;
+                border-right: 1px solid @light-border-color;
+                border-bottom: 1px solid @light-border-color;
+            }
+
+            .ribbon-base {
+           
+                background: darken(@red-theme-bg, 10%);
+
+                &:before {
+                    
+                    border-left: 1px dashed @red-theme-bg;
+                    border-right: 1px dashed @red-theme-bg;
+                    border-bottom: 1px dashed @red-theme-bg;
+                }
+
+            }
+
+            .ribbon-text{
+
+                color: @light-text-color;
+
+            }
+
+        }
+
+        &:hover{
+
+
+            .plan_price_title {
+                color: darken(@light-text-color, 5%);
+            }
+
+             .packagetypebg {
+                border-bottom: 3px solid @dark-bg;
+                position: relative;
+                background: @red-theme-bg;
+
+                &:after{
+
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 50%;
+                    margin-left: -26px;
+                    width: 0;
+                    border-bottom: 15px solid @dark-bg;
+                    border-left: 26px solid transparent;
+                    border-right: 26px solid transparent;
+
+                }
+
+            }
+
+            
+
+
+        }
+
+    }
+    
+
+/***********************************************************************************************/
+/* 03. BLUE THEME */
+/***********************************************************************************************/
+    .blue_theme{
+
+        .inner-shadow(0,0,5px,0px, 0.2);
+
+        .plan_price_title {
+
+            &:after{
+
+                background: @blue-theme-bg;
+
+            }
+
+        }    
+
+        .packagetypebg {
+            border-bottom: 3px solid @blue-theme-bg;
+            position: relative;
+            color: @dark-bg;
+             .transition( all,  0.5s );
+            &:after{
+                .transition( all,  0.5s );
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 50%;
+                margin-left: -26px;
+                width: 0;
+                border-bottom: 15px solid @blue-theme-bg;
+                border-left: 26px solid transparent;
+                border-right: 26px solid transparent;
+
+            }
+            
+        }
+
+        .package_amount_duration {
+       
+            span.package_icon{
+
+                i {
+                    color: @blue-theme-bg;
+                }
+            }
+
+        }
+
+        .features li {
+            .transition( all,  0.3s );
+
+            &:hover {
+              color: @blue-theme-bg;
+              border-color: @light-border-color;
+            }
+
+        }
+
+       .iconbg {
+            background: @blue-theme-bg;
+            color: @light-text-color;
+
+
+        }
+
+        .selectpackage {
+
+           a {
+
+             color: @blue-theme-bg;
+             background: transparent;
+             border: 1px solid @blue-theme-bg;
+             
+                 &:hover,
+                 &:focus{
+                     background: transparent;
+                     border: 1px solid lighten(@blue-theme-bg,10%);
+                     color: darken(@blue-theme-bg,30%);
+                 }
+
+             }
+
+         }
+
+      .ribbon {
+
+
+            .ribbon-container {
+               
+                border-left: 1px solid @light-border-color;
+                border-right: 1px solid @light-border-color;
+                border-bottom: 1px solid @light-border-color;
+            }
+
+            .ribbon-base {
+           
+                background: darken(@blue-theme-bg, 10%);
+
+                &:before {
+                    
+                    border-left: 1px dashed @blue-theme-bg;
+                    border-right: 1px dashed @blue-theme-bg;
+                    border-bottom: 1px dashed @blue-theme-bg;
+                }
+
+            }
+
+            .ribbon-text{
+
+                color: @light-text-color;
+
+            }
+
+        }
+
+        &:hover{
+
+
+            .plan_price_title {
+                color: darken(@light-text-color, 5%);
+            }
+
+             .packagetypebg {
+                border-bottom: 3px solid @dark-bg;
+                position: relative;
+                background: @blue-theme-bg;
+
+                &:after{
+
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 50%;
+                    margin-left: -26px;
+                    width: 0;
+                    border-bottom: 15px solid @dark-bg;
+                    border-left: 26px solid transparent;
+                    border-right: 26px solid transparent;
+
+                }
+
+                &:before{
+                
+                    -webkit-transform: rotateY(360deg);
+                    -moz-transform: rotateY(360deg);
+                    -ms-transform: rotateY(360deg);
+                    -o-transform: rotateY(360deg);
+                    transform: rotateY(360deg);
+                    opacity: 0.9;
+                
+                }
+
+            }
+
+
+        }
+
+    }
+
+/***********************************************************************************************/
+/* 04. GREEN THEME */
+/***********************************************************************************************/
+
+    .green_theme{
+
+         .inner-shadow(0,0,5px,0px, 0.2);
+
+        .plan_price_title {
+
+            &:after{
+
+                background: @green-theme-bg;
+
+            }
+
+        }       
+
+        .packagetypebg {
+            border-bottom: 3px solid @green-theme-bg;
+            position: relative;
+            color: @dark-bg;
+             .transition( all,  0.5s );
+            &:after{
+                .transition( all,  0.5s );
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 50%;
+                margin-left: -26px;
+                width: 0;
+                border-bottom: 15px solid @green-theme-bg;
+                border-left: 26px solid transparent;
+                border-right: 26px solid transparent;
+
+            }
+            
+        }
+
+        .package_amount_duration {
+       
+            span.package_icon{
+
+                i {
+                    color: @green-theme-bg;
+                }
+            }
+
+        }
+
+        .features li {
+            .transition( all,  0.3s );
+
+            &:hover {
+              color: @green-theme-bg;
+              border-color: @light-border-color;
+            }
+
+        }
+
+       .iconbg {
+            background: @green-theme-bg;
+            color: @light-text-color;
+
+
+        }
+
+        .selectpackage {
+
+           a {
+
+             color: @green-theme-bg;
+             background: transparent;
+             border: 1px solid @green-theme-bg;
+             
+                 &:hover,
+                 &:focus{
+                     background: transparent;
+                     border: 1px solid lighten(@green-theme-bg,10%);
+                     color: darken(@green-theme-bg,30%);
+                 }
+
+             }
+
+         }
+
+      .ribbon {
+
+
+            .ribbon-container {
+               
+                border-left: 1px solid @light-border-color;
+                border-right: 1px solid @light-border-color;
+                border-bottom: 1px solid @light-border-color;
+            }
+
+            .ribbon-base {
+           
+                background: darken(@green-theme-bg, 10%);
+
+                &:before {
+                    
+                    border-left: 1px dashed @green-theme-bg;
+                    border-right: 1px dashed @green-theme-bg;
+                    border-bottom: 1px dashed @green-theme-bg;
+                }
+
+            }
+
+            .ribbon-text{
+
+                color: @light-text-color;
+
+            }
+
+        }
+
+        &:hover{
+
+
+            .plan_price_title {
+                color: darken(@light-text-color, 5%);
+            }
+
+             .packagetypebg {
+                border-bottom: 3px solid @dark-bg;
+                position: relative;
+                background: @green-theme-bg;
+
+                &:after{
+
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 50%;
+                    margin-left: -26px;
+                    width: 0;
+                    border-bottom: 15px solid @dark-bg;
+                    border-left: 26px solid transparent;
+                    border-right: 26px solid transparent;
+
+                }
+
+                &:before{
+                
+                    -webkit-transform: rotateY(360deg);
+                    -moz-transform: rotateY(360deg);
+                    -ms-transform: rotateY(360deg);
+                    -o-transform: rotateY(360deg);
+                    transform: rotateY(360deg);
+                    opacity: 0.9;
+                
+                }
+
+            }
+
+
+        }
+
+
+
+    }
+
+
+/***********************************************************************************************/
+/* 05. ORANGE THEME */
+/***********************************************************************************************/
+    .orange_theme{
+
+         .inner-shadow(0,0,5px,0px, 0.2);
+
+        .plan_price_title {
+
+            &:after{
+
+                background: @orange-theme-bg;
+
+            }
+
+        }      
+
+        .packagetypebg {
+            border-bottom: 3px solid @orange-theme-bg;
+            position: relative;
+            color: @dark-bg;
+             .transition( all,  0.5s );
+            &:after{
+                .transition( all,  0.5s );
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 50%;
+                margin-left: -26px;
+                width: 0;
+                border-bottom: 15px solid @orange-theme-bg;
+                border-left: 26px solid transparent;
+                border-right: 26px solid transparent;
+
+            }
+            
+        }
+
+        .package_amount_duration {
+       
+            span.package_icon{
+
+                i {
+                    color: @orange-theme-bg;
+                }
+            }
+
+        }
+
+        .features li {
+            .transition( all,  0.3s );
+
+            &:hover {
+              color: @orange-theme-bg;
+              border-color: @light-border-color;
+            }
+
+        }
+
+       .iconbg {
+            background: @orange-theme-bg;
+            color: @light-text-color;
+
+
+        }
+
+        .selectpackage {
+
+           a {
+
+             color: @orange-theme-bg;
+             background: transparent;
+             border: 1px solid @orange-theme-bg;
+             
+                 &:hover,
+                 &:focus{
+                     background: transparent;
+                     border: 1px solid lighten(@orange-theme-bg,10%);
+                     color: darken(@orange-theme-bg,30%);
+                 }
+
+             }
+
+         }
+
+      .ribbon {
+
+
+            .ribbon-container {
+               
+                border-left: 1px solid @light-border-color;
+                border-right: 1px solid @light-border-color;
+                border-bottom: 1px solid @light-border-color;
+            }
+
+            .ribbon-base {
+           
+                background: darken(@green-theme-bg, 10%);
+
+                &:before {
+                    
+                    border-left: 1px dashed @orange-theme-bg;
+                    border-right: 1px dashed @orange-theme-bg;
+                    border-bottom: 1px dashed @orange-theme-bg;
+                }
+
+            }
+
+            .ribbon-text{
+
+                color: @light-text-color;
+
+            }
+
+        }
+
+        &:hover{
+
+
+            .plan_price_title {
+                color: darken(@light-text-color, 5%);
+            }
+
+             .packagetypebg {
+                border-bottom: 3px solid @dark-bg;
+                position: relative;
+                background: @orange-theme-bg;
+
+                &:after{
+
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 50%;
+                    margin-left: -26px;
+                    width: 0;
+                    border-bottom: 15px solid @dark-bg;
+                    border-left: 26px solid transparent;
+                    border-right: 26px solid transparent;
+
+                }
+
+                &:before{
+                
+                    -webkit-transform: rotateY(360deg);
+                    -moz-transform: rotateY(360deg);
+                    -ms-transform: rotateY(360deg);
+                    -o-transform: rotateY(360deg);
+                    transform: rotateY(360deg);
+                    opacity: 0.9;
+                
+                }
+
+            }
+
+
+        }
+
+    }
+
+
+/***********************************************************************************************/
+/* 06. YELLOW THEME */
+/***********************************************************************************************/
+    .yellow_theme{
+
+        .inner-shadow(0,0,5px,0px, 0.2);
+
+        .plan_price_title {
+
+            &:after{
+
+                background: @yellow-theme-bg;
+
+            }
+
+        }  
+
+        .packagetypebg {
+            border-bottom: 3px solid @yellow-theme-bg;
+            position: relative;
+            color: @dark-bg;
+             .transition( all,  0.5s );
+            &:after{
+                .transition( all,  0.5s );
+                position: absolute;
+                content: '';
+                bottom: 0;
+                left: 50%;
+                margin-left: -26px;
+                width: 0;
+                border-bottom: 15px solid @yellow-theme-bg;
+                border-left: 26px solid transparent;
+                border-right: 26px solid transparent;
+
+            }
+            
+        }
+
+        .package_amount_duration {
+       
+            span.package_icon{
+
+                i {
+                    color: @yellow-theme-bg;
+                }
+            }
+
+        }
+
+        .features li {
+            .transition( all,  0.3s );
+
+            &:hover {
+              color: @yellow-theme-bg;
+              border-color: @light-border-color;
+            }
+
+        }
+
+       .iconbg {
+            background: @yellow-theme-bg;
+            color: @light-text-color;
+
+
+        }
+
+        .selectpackage {
+
+           a {
+
+             color: @yellow-theme-bg;
+             background: transparent;
+             border: 1px solid @yellow-theme-bg;
+             
+                 &:hover,
+                 &:focus{
+                     background: transparent;
+                     border: 1px solid lighten(@yellow-theme-bg,10%);
+                     color: darken(@yellow-theme-bg,30%);
+                 }
+
+             }
+
+         }
+
+      .ribbon {
+
+
+            .ribbon-container {
+               
+                border-left: 1px solid @light-border-color;
+                border-right: 1px solid @light-border-color;
+                border-bottom: 1px solid @light-border-color;
+            }
+
+            .ribbon-base {
+           
+                background: darken(@green-theme-bg, 10%);
+
+                &:before {
+                    
+                    border-left: 1px dashed @yellow-theme-bg;
+                    border-right: 1px dashed @yellow-theme-bg;
+                    border-bottom: 1px dashed @yellow-theme-bg;
+                }
+
+            }
+
+            .ribbon-text{
+
+                color: @light-text-color;
+
+            }
+
+        }
+
+        &:hover{
+
+
+            .plan_price_title {
+                color: darken(@light-text-color, 5%);
+            }
+
+             .packagetypebg {
+                border-bottom: 3px solid @dark-bg;
+                position: relative;
+                background: darken(@yellow-theme-bg, 5%);
+
+                &:after{
+
+                    position: absolute;
+                    content: '';
+                    bottom: 0;
+                    left: 50%;
+                    margin-left: -26px;
+                    width: 0;
+                    border-bottom: 15px solid @dark-bg;
+                    border-left: 26px solid transparent;
+                    border-right: 26px solid transparent;
+
+                }
+
+                 &:before{
+                
+                    -webkit-transform: rotateY(360deg);
+                    -moz-transform: rotateY(360deg);
+                    -ms-transform: rotateY(360deg);
+                    -o-transform: rotateY(360deg);
+                    transform: rotateY(360deg);
+                    opacity: 0.9;
+                
+                }
+
+            }
+
+
+        }
+
+    }
+
+
+
+}
+
+/***********************************************************************************************/
+/* 07. PRICING TABLE HELPERS */
+/***********************************************************************************************/
+
+.bpt-align-left{
+    text-align: left;
+}
+
+.bpt-align-center{
+    text-align: center;
+}
+
+.bpt-align-right{
+    text-align: right;
+}
+
+/***********************************************************************************************/
+/* 08. PRICING TABLE COLUMNS */
+/***********************************************************************************************/
+
+.plan-col-1 .planbg {
+  width: 98%;
+}
+.plan-col-2 .planbg {
+  width: 48%;
+}
+.plan-col-3 .planbg {
+  width: 31%;
+}
+.plan-col-4 .planbg {
+  width: 23%;
+}
+.plan-col-5 .planbg {
+  width: 18%;
+}
+
+/***********************************************************************************************/
+/* 09. RESPONSIVE STYLING */
+/***********************************************************************************************/
+
+@media only screen and (min-width: 0px) and (max-width: 479px) {
+  .minimal-pricing-table .planbg {
+    width: 98%;
+    margin-left: 1%;
+    margin-right: 1%;
+    .transition( all,  0.3s );
+  }
+  .plan-col-1 .planbg,
+  .plan-col-2 .planbg,
+  .plan-col-3 .planbg,
+  .plan-col-4 .planbg {
+    width: 98%;
+  }
+
+}
+@media only screen and (min-width: 480px) and (max-width: 1000px) {
+  .minimal-pricing-table .planbg {
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+    .transition( all,  0.3s );
+  }
+}
